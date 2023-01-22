@@ -1,0 +1,70 @@
+{% load static %}
+{% load proger_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proger</title>
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Proger</h1>
+        <a href="#" class="login">Войти</a>
+    </header>
+    <div class="category">
+        {% getcats as cats%}
+        <ul>
+            {% if cat_selected == 0 %}
+                <li class="selected">Главное</li>
+            {% else %}
+                <li><a href="{% url 'home' %}">Главное</a></li>
+            {% endif %}
+            {% for c in cats %}
+            {% if c.pk == cat_selected %}
+                <li class="selected">{{c.name}}</li>
+            {% else %}
+                <li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="add-post-content">
+        <h2>Создание поста</h2>
+        <form action="{% url 'add_post' %}" method="post">
+            {% csrf_token %}
+
+            <div class="form-error">{{ from.non_field_errors }}</div>
+            <p><label class="form-label" for="{{ form.title.id_for_label }}">{{ form.title.label }}:</label>{{ form.title }}</p>
+            <div class="form-error">{{ form.title.errors }}</div>
+            <p><label class="form-label" for="{{ form.slug.id_for_label }}">{{ form.slug.label }}:</label>{{ form.slug }}</p>
+            <div class="form-error">{{ form.slug.errors }}</div>
+            <p><label class="form-label" for="{{ form.content.id_for_label }}">{{ form.content.label }}:</label>{{ form.content }}</p>
+            <div class="form-error">{{ form.content.errors }}</div>
+            <p><label class="form-label" for="{{ form.cat.id_for_label }}">{{ form.cat.label }}:</label>{{ form.cat }}</p>
+            <div class="form-error">{{ form.cat.errors }}</div>
+            <button><p>Создать пост</p></button>
+        </form>
+    </div>
+    
+</body>
+</html>
+
+<!-- <form action="" method="post">
+    {% csrf_token  %}
+    <input type="text" placeholder="Название поста" name="title"><br>
+    <p><textarea name="content" id="" rows="15" placeholder="Текст"></textarea></p><br>
+    <p class="title-select">Тема поста:</p>
+    <select name="categories" id="">
+    {% getcats as cats %}
+    {% for c in cats %}
+        <option value="1"><p>{{ c.name }}</p></option>
+    {% endfor %}
+    </select><br>
+    <button><p>Создать пост</p></button>
+</form> -->

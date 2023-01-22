@@ -1,0 +1,48 @@
+{% load static %}
+{% load proger_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proger</title>
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Proger</h1>
+        {% if user.is_authenticated %}
+        <a href="{% url 'add_post' %}" class="add_post">Написать пост</a>
+        {% endif %}
+        {% if user.is_anonymous %}
+        <a href="#" class="login">Войти</a>
+        {% endif %}
+
+    </header>
+    <div class="category">
+        {% getcats as cats%}
+        <ul>
+            {% if cat_selected == 0 %}
+                <li class="selected">Главное</li>
+            {% else %}
+                <li><a href="{% url 'home' %}">Главное</a></li>
+            {% endif %}
+            {% for c in cats %}
+            {% if c.pk == cat_selected %}
+                <li class="selected">{{c.name}}</li>
+            {% else %}
+                <li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    
+    {%block content%}
+    {%endblock%}
+    
+</body>
+</html>

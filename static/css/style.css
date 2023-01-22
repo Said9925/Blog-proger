@@ -1,0 +1,465 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6,p,a{font-size:inherit;font-weight: 400;}
+
+h1, h2, p, a, li {font-family: 'JetBrains Mono', monospace;}
+
+body {
+	background-color: #0d1212;
+}
+
+header {
+	width: 100%;
+	height: 120px;
+	position: fixed;
+	z-index: 1;
+	backdrop-filter: blur(15px);
+}
+
+header h1 {
+	font-size: 42px;
+	color: white;
+	margin-top: 2%;
+	margin-left: 25px;
+}
+
+
+
+
+.add_post {
+	position: absolute;
+	left: 68.5%;
+	font-size: 24px;
+	color: #768787 ;
+	border-radius: 12px;
+	padding: 15px;
+	top: 50%;
+	background-color: #212828;
+	border: 1px solid #202222;;
+}
+
+.add_post:hover {
+	color: #bac8c8 ;
+	transition: 0.5s;
+}
+
+.login {
+	position: absolute;
+	left: 91%;
+	top: 50%;
+	font-size: 22px;
+	color: white;
+	border-radius: 12px;
+	padding: 15px;
+}
+
+
+.login:hover {
+	background-color: #252525;
+	transition: 0.7s;
+}
+
+.category {
+	position: fixed;
+	width: 16%;
+	top: 15%;
+	left: 0;
+	color: white;
+}
+
+.category li {
+	margin-top: 15px;
+	font-size: 20px;
+	margin-left: 25px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 15px;
+	font-weight: 600;
+	color: #2aa5a0;
+}
+
+.category a {
+	text-decoration: none;
+	color: #c5d3d3;
+	padding: 10px;
+}
+
+.category a:hover {
+	color: #2aa5a0;
+	transition: 0.3s;
+}
+
+.content {
+	width: 60%;
+	left: 20%;
+	height: 300px;
+	background-color: #181d1c;
+	position: relative;
+	z-index: 0;
+	top: 15%;
+	border-radius:20px;
+	padding: 10px;
+	color: #edf1f0;
+	border: 1px solid #202222;
+	margin-bottom: 40px;
+}
+
+.content-1 {
+	width: 60%;
+	left: 20%;
+	height: auto;
+	background-color: #181d1c;
+	position: relative;
+	z-index: 0;
+	top: 15%;
+	border-radius:20px;
+	padding: 10px;
+	color: #edf1f0;
+	border: 1px solid #202222;
+	margin-bottom: 40px;
+}
+
+.content-1 h2 {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.content-1 p {
+	font-size: 18px;
+	padding: 10px;
+}
+
+.post-theme {
+	position: absolute;
+	left: 2%;
+	top: 2%;
+	font-size: 16px;
+}
+
+.post-title {
+	position: absolute;
+	left: 2%;
+	top: 15%;
+	font-size: 20px;
+
+}
+
+
+.user-post {
+	position: absolute;
+	left: 2%;
+	top: 4%;
+	font-size: 20px;
+}
+
+.post-date {
+	position: absolute;
+	right: 2%;
+	top: 4%;
+	font-size: 16px;
+}
+
+.post-text {
+	position: absolute;
+	left: 2%;
+	top: 30%;
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+
+
+.btn-read-post {
+	position: absolute;
+	top: 80%;
+	text-decoration: none;
+	left: 2%;
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+	border-radius: 14px;
+}
+
+.btn-read-post:hover {
+	background-color: #2aa5a0;
+	transition: 0.5s;
+}
+
+
+.block-signup {
+	width: 30%;
+	height: 550px;
+	border: 1px solid #252525;
+	background-color: #212828;
+	border-radius: 50px;
+	position: relative;
+	top: 20%;
+	left: 35%;
+}
+
+.block-signup form {
+	padding-left: 10%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+	top: 10%;
+}
+
+.block-signup input {
+	font-size: 24px;
+	padding: 15px;
+	width: 90%;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	border-radius: 14px;
+}
+
+.block-signup h2 {
+	font-size: 36px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 5%;
+	color: #eef2f1;
+}
+
+.block-signup button {
+	font-size: 24px;
+	padding: 20px;
+	width: 90%;
+	margin-top: 20px;
+	border-radius: 14px;
+	color: #c5d3d3;
+	background-color: #181d1c;
+}
+
+
+.block-signup button:hover {
+	background-color: #0d1212;
+	transition: 0.7s;
+}
+
+
+.link-ease-in-out {
+	position: absolute;
+	left: 10%;
+	top: 80%;
+}
+
+.link-ease-in-out a {
+    display: inline-block;
+    color: #c5d3d3; /* Цвет обычной ссылки */
+    line-height: 1;
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer;
+	font-size: 20px;
+}
+.link-ease-in-out a:after {
+    background-color: #eef2f1; /* Цвет линии при наведении на нее курсора мыши */
+    display: block;
+    content: "";
+    height: 2px; /* Высота линии */
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.link-ease-in-out a:hover:after,
+.link-ease-in-out a:focus:after {
+    width: 100%;
+}
+
+
+
+
+.block-login {
+	width: 30%;
+	height: 550px;
+	border: 1px solid #252525;
+	background-color: #212828;
+	border-radius: 50px;
+	position: relative;
+	top: 20%;
+	left: 35%;
+}
+
+
+.block-login form {
+	padding-left: 10%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+	top: 10%;
+}
+
+.block-login input {
+	font-size: 24px;
+	padding: 15px;
+	width: 90%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 14px;
+}
+
+.block-login h2 {
+	font-size: 36px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 5%;
+	color: #eef2f1;
+}
+
+.block-login button {
+	font-size: 24px;
+	padding: 20px;
+	width: 90%;
+	margin-top: 20px;
+	border-radius: 14px;
+	/* background-color: #212828; */
+	color: #c5d3d3;
+	background-color: #181d1c;
+}
+
+
+.block-login button:hover {
+	background-color: #0d1212;
+	transition: 0.7s;
+}
+
+
+.add-post-content {
+	width: 60%;
+	left: 20%;
+	height: 800px;
+	background-color: #181d1c;
+	position: relative;
+	z-index: 0;
+	top: 15%;
+	border-radius:20px;
+	padding: 10px;
+	color: #edf1f0;
+	border: 1px solid #202222;
+	margin-bottom: 40px;
+}
+
+.add-post-content h2 {
+	text-align: center;
+	font-size: 28px;
+}
+
+.add-post-content form {
+	height: 700px;
+	position: relative;
+	top: 5%;
+	padding: 10px;
+}
+
+
+.add-post-content input {
+	width: 80%;
+	font-size: 20px;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 14px;
+}
+
+.add-post-content textarea {
+	resize: none;
+	margin-bottom: 10px;
+	width: 80%;
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 14px;
+}
+
+.add-post-content select {
+	font-size: 15px;
+	padding: 7px;
+	border-radius: 5px;
+}
+
+.add-post-content button{
+	padding: 10px;
+	margin-left: 10px;
+	margin-top: 55px;
+	font-size: 24px;
+	border-radius: 14px;
+	color: #c5d3d3;
+	background-color: #212828;
+}
+
+.add-post-content button:hover {
+	color: #2aa5a0;
+	transition: 0.5s;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+	font-size: 18px;
+	padding: 10px;
+}
+
+.form-error {
+	font-size: 18px;
+	color:  #fe4a4a;
+	padding: 10px;
+}
+
+/* Цвета для сайта
+--основной цвет текста: #eef2f1;
+--tp-вторичный цвет текста: #c5d3d3;
+--tp-третичный цветной текст: #768787;
+--tp-фирменный цветной текст: #2aa5a0;
+--tp-цвет текста ошибки: #fe4a4a;
+--tp-основной фоновый цвет RGB: 0, 0, 0;
+--tp-основной фоновый цвет: #000000;
+--tp-вторичный фоновый цвет: #181d1c;
+--tp-третичный цвет фона: #212828;
+--tp-основной цвет границы: #252525;
+--tp-фирменный цвет: #2aa5a0;
+--tp-бренд-цвет-rgb: 42, 165, 160;
+--tp-фирменный светлый цвет: rgba(42, 165, 160, 0.17);
+--tp-цвет элемента: #485656;
+--tp-основной цвет кнопки: #ffffff;
+--tp-вторичный цвет кнопки: #1d706d;
+--tp-основной цвет кнопки-фокуса: #b8c9c9;
+--tp-цвет вторичной кнопки-фокуса: #2aa5a0;
+--tp-telegram-color: #25a3e1; 
+*/

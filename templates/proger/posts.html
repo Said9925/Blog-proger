@@ -1,0 +1,18 @@
+{% extends 'proger/base.html' %}
+{% load static %}
+{%block content%}
+{% for p in post %}
+    <div class="content">
+        <p class="user-post">{{ p.author }}</p><br>
+        <p class="post-title">{{ p.title }}</p><br>
+        <p class="post-date">Дата: {{ p.create_at| date:"d-m-Y"}}</p><br>
+        <p class="post-text">{{ p.content |truncatewords:40  }}</p><br>
+        <a href="{{ p.get_absolute_url }}" class="btn-read-post">Читать далее</a>
+    </div>    
+{% empty %}
+<div class="content">
+    <p class="post-title">На эту тему нет постов !</p>
+</div>
+
+{% endfor %}
+{% endblock %} 
