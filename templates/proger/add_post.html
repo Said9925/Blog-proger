@@ -15,7 +15,12 @@
 <body>
     <header>
         <h1>Proger</h1>
-        <a href="#" class="login">Войти</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="login">Выйти</a>
+        {% endif %}
+        {% if user.is_anonymous %}
+        <a href="{% url 'login' %}" class="login">Войти</a>
+        {% endif %}
     </header>
     <div class="category">
         {% getcats as cats%}

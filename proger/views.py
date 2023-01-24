@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render
 from django.views.generic import ListView, DeleteView, CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -49,9 +49,4 @@ class AbbPostView(LoginRequiredMixin ,CreateView):
     success_url = reverse_lazy('home')
     raise_exception = True
 
-def login(request):
-    return render(request, 'registration/login.html')
 
-
-def signup(request):
-    return render(request, 'registration/signup.html')

@@ -1,7 +1,5 @@
 from django import forms
-from django.db import models
-from django.core.exceptions import ValidationError
-from proger.models import Category, Post
+from proger.models import Post
 
 
 class AddPostForm(forms.ModelForm):

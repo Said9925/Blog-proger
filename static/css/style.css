@@ -134,7 +134,7 @@ header h1 {
 	padding: 10px;
 	color: #edf1f0;
 	border: 1px solid #202222;
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
 .content-1 {
@@ -221,7 +221,7 @@ header h1 {
 
 .block-signup {
 	width: 30%;
-	height: 550px;
+	height: 600px;
 	border: 1px solid #252525;
 	background-color: #212828;
 	border-radius: 50px;
@@ -276,7 +276,7 @@ header h1 {
 .link-ease-in-out {
 	position: absolute;
 	left: 10%;
-	top: 80%;
+	top: 92%;
 }
 
 .link-ease-in-out a {
@@ -330,7 +330,7 @@ header h1 {
 	padding: 15px;
 	width: 90%;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 20px; 
 	border-radius: 14px;
 }
 
@@ -442,6 +442,10 @@ header h1 {
 	padding: 10px;
 }
 
+.block-signup label {
+	color: #bac8c8;
+	font-size: 18px;
+}
 /* Цвета для сайта
 --основной цвет текста: #eef2f1;
 --tp-вторичный цвет текста: #c5d3d3;
