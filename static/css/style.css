@@ -281,17 +281,17 @@ header h1 {
 
 .link-ease-in-out a {
     display: inline-block;
-    color: #c5d3d3; /* Цвет обычной ссылки */
+    color: #c5d3d3; 
     line-height: 1;
-    text-decoration: none; /* Убираем подчеркивание */
+    text-decoration: none;
     cursor: pointer;
 	font-size: 20px;
 }
 .link-ease-in-out a:after {
-    background-color: #eef2f1; /* Цвет линии при наведении на нее курсора мыши */
+    background-color: #eef2f1; 
     display: block;
     content: "";
-    height: 2px; /* Высота линии */
+    height: 2px; 
     width: 0%;
     -webkit-transition: width .3s ease-in-out;
     -moz--transition: width .3s ease-in-out;
@@ -446,24 +446,3 @@ header h1 {
 	color: #bac8c8;
 	font-size: 18px;
 }
-/* Цвета для сайта
---основной цвет текста: #eef2f1;
---tp-вторичный цвет текста: #c5d3d3;
---tp-третичный цветной текст: #768787;
---tp-фирменный цветной текст: #2aa5a0;
---tp-цвет текста ошибки: #fe4a4a;
---tp-основной фоновый цвет RGB: 0, 0, 0;
---tp-основной фоновый цвет: #000000;
---tp-вторичный фоновый цвет: #181d1c;
---tp-третичный цвет фона: #212828;
---tp-основной цвет границы: #252525;
---tp-фирменный цвет: #2aa5a0;
---tp-бренд-цвет-rgb: 42, 165, 160;
---tp-фирменный светлый цвет: rgba(42, 165, 160, 0.17);
---tp-цвет элемента: #485656;
---tp-основной цвет кнопки: #ffffff;
---tp-вторичный цвет кнопки: #1d706d;
---tp-основной цвет кнопки-фокуса: #b8c9c9;
---tp-цвет вторичной кнопки-фокуса: #2aa5a0;
---tp-telegram-color: #25a3e1; 
-*/

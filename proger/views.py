@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import ListView, DeleteView, CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -6,6 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from proger.models import Post
 from proger.forms import AddPostForm
 from proger.utils import DataMixin
+
 
 class HomeView(DataMixin, ListView):
     model = Post
@@ -43,10 +43,8 @@ class CategoryView(ListView):
         return context
 
 
-class AbbPostView(LoginRequiredMixin ,CreateView):
+class AbbPostView(LoginRequiredMixin, CreateView):
     form_class = AddPostForm
     template_name = 'proger/add_post.html'
     success_url = reverse_lazy('home')
     raise_exception = True
-
-
