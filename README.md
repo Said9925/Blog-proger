@@ -15,7 +15,7 @@
 ## Языки и инструменты использованные в данном проекте:
 
 ![Python](https://img.shields.io/badge/-Python-306998?style=for-the-badge&logo=python&logoColor=ffdc29)
-![Django](https://img.shields.io/badge/-Flask-0c4b33?style=for-the-badge&logo=Django)
+![Django](https://img.shields.io/badge/-Django-0c4b33?style=for-the-badge&logo=Django)
 ![Postgresql](https://img.shields.io/badge/Postgresql-005084?style=for-the-badge&logo=postgresql&logoColor=ffffff)
 
 ![HTML](https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5&logoColor=ffffff)
